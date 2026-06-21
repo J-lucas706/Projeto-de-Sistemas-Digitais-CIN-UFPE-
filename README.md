@@ -26,31 +26,44 @@ Foi implementado um detector de borda de subida para os botões `KEY[3:1]` (que 
 
 ## 2. Diagrama de Estados
 
-O fluxo do sistema opera em 7 estados principais.
-
 ```mermaid
-stateDiagram-v2
-    [*] --> EDIT_D1
-    
-    EDIT_D1 --> EDIT_D2 : KEY[1] (Confirm)
-    EDIT_D1 --> EDIT_D1 : KEY[2]/KEY[3] (Inc/Dec)
-    
-    EDIT_D2 --> EDIT_D3 : KEY[1] (Confirm)
-    EDIT_D2 --> EDIT_D2 : KEY[2]/KEY[3] (Inc/Dec)
-    
-    EDIT_D3 --> EDIT_D4 : KEY[1] (Confirm)
-    EDIT_D3 --> EDIT_D3 : KEY[2]/KEY[3] (Inc/Dec)
-    
-    EDIT_D4 --> VERIFY : KEY[1] (Confirm)
-    EDIT_D4 --> EDIT_D4 : KEY[2]/KEY[3] (Inc/Dec)
-    
-    VERIFY --> SUCCESS : Senha Correta
-    VERIFY --> FAIL : Senha Incorreta
-    
-    SUCCESS --> EDIT_D1 : Timer = 5 seg
-    FAIL --> EDIT_D1 : Timer = 3 seg
 
-    note right of EDIT_D1 : KEY[0] (Reset) retorna qualquer estado para EDIT_D1
+stateDiagram-v2
+
+[*] --> EDIT_D1
+
+
+EDIT_D1 --> EDIT_D2 : KEY[1] (Confirm)
+
+EDIT_D1 --> EDIT_D1 : KEY[2]/KEY[3] (Inc/Dec)
+
+
+EDIT_D2 --> EDIT_D3 : KEY[1] (Confirm)
+
+EDIT_D2 --> EDIT_D2 : KEY[2]/KEY[3] (Inc/Dec)
+
+
+EDIT_D3 --> EDIT_D4 : KEY[1] (Confirm)
+
+EDIT_D3 --> EDIT_D3 : KEY[2]/KEY[3] (Inc/Dec)
+
+
+EDIT_D4 --> VERIFY : KEY[1] (Confirm)
+
+EDIT_D4 --> EDIT_D4 : KEY[2]/KEY[3] (Inc/Dec)
+
+
+VERIFY --> SUCCESS : Senha Correta
+
+VERIFY --> FAIL : Senha Incorreta
+
+
+SUCCESS --> EDIT_D1 : Timer = 5 seg
+
+FAIL --> EDIT_D1 : Timer = 3 seg
+
+note right of EDIT_D1 : KEY[0] (Reset) retorna qualquer estado para EDIT_D1```
+
 
 ## 3. Bugs Conhecidos (Known Issues)
 Debounce Físico dos Botões: O código utiliza uma lógica de detecção de borda síncrona. Em hardware físico, os contatos dos push buttons podem vibrar (bouncing). Como não há um módulo dedicado de debounce por atraso, um pressionamento pode eventualmente ser lido como múltiplos cliques rápidos.
