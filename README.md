@@ -26,10 +26,10 @@ Foi implementado um detector de borda de subida para os botões `KEY[3:1]` (que 
 
 ## 2. Diagrama de Estados
 
-O fluxo do sistema opera em 7 estados principais
+O fluxo do sistema opera em 7 estados principais.
 
-  ```mermaid
-  stateDiagram-v2
+```mermaid
+stateDiagram-v2
     [*] --> EDIT_D1
     
     EDIT_D1 --> EDIT_D2 : KEY[1] (Confirm)
