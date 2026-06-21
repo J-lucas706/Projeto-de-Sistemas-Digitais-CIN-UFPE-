@@ -1,4 +1,4 @@
-# Projeto: SafeCrack FSM - Fechadura Digital (DE2-115)
+# Projeto de Sistemas Digitais (CIN-UFPE)
 
 ## Integrantes do Grupo
 * Nome do Integrante 1 (Email)
