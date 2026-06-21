@@ -25,6 +25,7 @@ Este projeto segue a proposta da evolução de uma Máquina de Estados Finitos (
 Foi implementado um detector de borda de subida para os botões `KEY[3:1]` (que são ativos em nível baixo), garantindo que manter o botão pressionado gere apenas uma única ação na FSM. A temporização de sucesso e falha foi parametrizada com base no clock de 50 MHz da placa, utilizando um contador de 32 bits
 
 mermaid
+
 stateDiagram-v2
     [*] --> EDIT_D1
     
