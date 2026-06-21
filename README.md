@@ -62,7 +62,9 @@ SUCCESS --> EDIT_D1 : Timer = 5 seg
 
 FAIL --> EDIT_D1 : Timer = 3 seg
 
-note right of EDIT_D1 : KEY[0] (Reset) retorna qualquer estado para EDIT_D1```
+note right of EDIT_D1 : KEY[0] (Reset) retorna qualquer estado para EDIT_D1
+
+```
 
 
 ## 3. Bugs Conhecidos (Known Issues)
