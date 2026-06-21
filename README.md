@@ -1,11 +1,11 @@
 # Projeto de Sistemas Digitais (CIN-UFPE)
 
 ## Integrantes do Grupo
-* Nome do Integrante 1 (Email)
-* Nome do Integrante 2 (Email)
-* Nome do Integrante 3 (Email)
-* Nome do Integrante 4 (Email)
-* Nome do Integrante 5 (Email)
+* João Lucas Bezerra Silva (jlbs2@cin.ufpe.br)
+* Maria Luiza de Paula Portela (mlpp@cin.ufpe.br)
+* Vicente Martins Pereira Loureiro (vmpl@cin.ufpe.br)
+* Caio Cesar Souza de Lira (ccsl@cin.ufpe.br)
+* Matheus Luiz Teixeira da Silva (mlts@cin.ufpe.br)
 
 ## 1. Descrição Detalhada da Implementação
 
